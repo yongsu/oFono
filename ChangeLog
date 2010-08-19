@@ -1,0 +1,223 @@
+ver 0.26:
+	Fix busy loop in PPP disconnect with Huawei modem.
+	Add support for MCC/MNC via network registration interface.
+	Add support for SIM Toolkit agent interface.
+	Add initial support for IPv6 PDP context.
+
+ver 0.25:
+	Fix issue with PPP IPCP and too short timeouts.
+	Fix issue with Calypso modem and DTMF chars.
+	Fix issue with detection of some Huawei devices.
+	Fix issue with SIM polling and Ericsson MBM devices.
+	Fix potential overflow with SMS and GSM extension chars.
+	Add support for OFONO_ERROR_TYPE_SIM for negative SIM status.
+	Add support for display text decoding.
+	Add support for idle text proactive command.
+	Add support for SMS proactive commands.
+
+ver 0.24:
+	Fix race condition with GRPS attach operation.
+	Fix some issues with Option based devices.
+	Fix Huawei TTY hangup on context termination.
+	Fix crash within HDLC handling.
+	Fix incorrect packet length within PPP.
+	Add support for PPP server side.
+	Add support for decoding USSD PDUs.
+	Add support for SMS status report assembly.
+	Add support for SMS bearer settings.
+	Add initial support for Bluetooth plugin.
+
+ver 0.23:
+	Fix issue with operator info when not registered.
+	Fix issue with clean PPP shutdown on device removal.
+	Add support for status report notification via CDSI.
+	Add better support for Huawei E160 and E176 devices.
+	Add full GPRS support for Novatel based devices.
+	Add support for Novatel specific radio settings.
+	Add support for Option specific radio settings.
+	Add support for setting CBS topics on Qualcomm devices.
+
+ver 0.22:
+	Fix issue with VPATH builds.
+	Fix issue with SMS and more than 31 fragments.
+	Add even more SIM Toolkit parsing support.
+	Add support for modem online property.
+
+ver 0.21:
+	Add more parsing support for SIM Toolkit.
+	Add support for SIM insertion/removal events.
+	Add support for NITZ (network time) events.
+	Add support for reading EF_ICCID information.
+	Add support for advanced PPP integration.
+	Add support for HDLC specific abstraction.
+	Add support for simpler Technology values.
+	Add support for separate MCC/MNC SIM properties.
+	Add support for GPRS context with ISI modems.
+	Add support for SMS handling with ISI modems.
+	Add support for Wavecom WMP100 based devices.
+	Add support for Option iCON 451 based devices.
+	Add support for Huawei E1552 HSDPA USB devices.
+	Add support for Dell 5530 based devices.
+
+ver 0.20:
+	Fix issue with empty operator names.
+	Add missing API documentation.
+	Add support for Huawei EM770 modem.
+	Add more detailed parsing support for SIM Toolkit.
+	Add additional functionality for AT command server.
+	Add initial PPP implementation.
+
+ver 0.19:
+	Fix parsing of EFspdi for PLMN list.
+	Fix issues with Bluetooth handsfree handling.
+	Fix non-blocking handling for AT command server.
+	Add support for network-initiated USSD requests.
+	Add utility functions for SIM Toolkit support.
+
+ver 0.18:
+	Fix handling of GPRS attach logic.
+	Fix handling of username/password settings for STE/MBM modems.
+	Add support for Bluetooth Handsfree handling.
+	Add support for USSD_STATE_USER_ACTION.
+	Add radio settings atom and driver API.
+	Add framework for AT command server.
+
+ver 0.17:
+	Add support for ST-Ericsson based modems.
+	Add support for processing CBS even if no EFcbmid.
+	Add support for devices with CSCB mode 0 only.
+	Add support for Handsfree devices via BlueZ.
+	Add CID and LAC quirk handling for Huawei modems.
+
+ver 0.16:
+	Fix unregister of operators with null MCC/MNC.
+	Fix CPHS mailbox usage for 3GPP SIM cards.
+	Add support for persistent CBS Topics list.
+	Add support for persistent primary context identifiers.
+	Add support for SIM cache indexing by phase.
+	Add netmask to HSO GPRS context driver.
+
+ver 0.15:
+	Fix missing netmask value for newer MBM devices.
+	Fix concatenation of datagram SMS messages.
+	Add support for 51.011 EFecc format.
+	Add support for Powered property to CbsManager.
+	Add utility for checking if CBS topic is in range.
+
+ver 0.14:
+	Fix some issues with modem shutdown behavior.
+	Fix reset of context settings when deactivated.
+	Fix signal strength handling for Calypso modem.
+	Add proper signal strength handling for HSO modem.
+	Add support for enabling HSO Speech Services.
+	Add modem description for newer MBM devices.
+	Add clip_timeout for HFP incoming call handling.
+	Add poll_clcc for HFP multiparty calls.
+	Add utility for testing GSM GPRS dialing.
+
+ver 0.13:
+	Add better support for call id allocation.
+	Add CLCC query when initializing modem.
+	Add DTMF tone sending support for HFP modem.
+	Add support for modem disabling on shutdown.
+
+ver 0.12:
+	Fix various issues with Calypso modem driver.
+	Fix order of CMER and CIND in SLC connection.
+	Fix issue with SMS references stored as 8 bits.
+	Add static IP configuration for newer MBM devices.
+	Add context status polling for older MBM devices.
+	Add username/password support for MBM devices.
+	Add support for Huawei specific error terminator.
+	Add support for weird naming of Dell 5530 devices.
+	Add udev rules for Option GI0201 and GTM382 modems.
+
+ver 0.11:
+	Fix issue with repeated CCWA notifications.
+	Fix issue with double-swap when 3-way dialing.
+	Add CLCC polling for better multiparty call support.
+	Add GPRS context driver for Option HSO devices.
+	Add support for GPRS interface configuration.
+
+ver 0.10:
+	Fix issues with correct ATD handling.
+	Fix issues with indication handling.
+	Add support for SMS history capability.
+	Add basic save/restore support for GPRS settings.
+	Add three-way calling support to HFP voice driver.
+	Add call volume support to HFP modem plugin.
+	Add initial support for Palm Pre modems.
+
+ver 0.9:
+	Fix issues with voice call dialing logic.
+	Fix issues with USSD decoding support.
+	Add initial GPRS support for MBM modems.
+	Add mode property to network registration.
+	Add support for advanced options in modem.conf file.
+	Add voice call driver for Bluetooth Handsfree.
+
+ver 0.8:
+	Fix crash when internal structures differ.
+	Fix issues with handling empty text messages.
+	Add driver model for TTY multiplexer support.
+	Add support for multiplexer usage with Calypso modems.
+	Add support for PhoNet/ISI call barring, forwarding and waiting.
+	Add support for PhoNet/ISI voice call handling.
+
+ver 0.7:
+	Fix handling of empty SMS text messages.
+	Fix GAtChat's next_hexstring to handle optional quotes.
+	Fix generic SIM driver to work correctly with 3G SIM cards.
+	Add utility functions to parse 2G and 3G get response data.
+	Add call volume interface to adjust speaker and mic volume.
+	Add support for basic elementary file database.
+
+ver 0.6:
+	Fix build issue with example history plugin.
+	Fix segmentation fault from SIM reading on Calypso modem.
+	Add more scripts for SMS and voice call testing.
+
+ver 0.5:
+	Fix reading of left overs in ME storage on startup.
+	Fix parsing of Enhanced Voicemail notifications.
+	Add reading of various CBS related EFs.
+	Add ability to expire PLMN wide messages.
+	Add support for national language variants.
+	Add support for PIN and PUK handling.
+	Add support for TI Calypso modem.
+	Add initial support for Novatel based devices.
+	Add initial support for Huawei based devices.
+	Add initial support for Option HSO based devices.
+	Add initial support for TTY multiplexing.
+
+ver 0.4:
+	Add atom framework and update all drivers.
+	Add support for modem driver framework.
+	Add support for static modem configuration.
+	Add support for specialized phone simulator driver.
+	Add support for HTC G1 modem devices.
+	Add support for Ericsson MBM devices.
+	Add support for AT command PDU listing.
+	Add support for low-level PhoNet/ISI pipe endpoints.
+	Add support for full non-recursive build.
+
+ver 0.3:
+	Fix support for phonebook reading.
+	Fix some issues with network registration.
+	Fix some issues with MSISDN handling.
+	Fix some issues with SIM storage support.
+	Add caching for EF-PNN and EF-OPL SIM files.
+	Add support for SIM ADN type number handling.
+	Add support for tracking message waiting indications.
+	Add support for user-provided AT parsers.
+	Add initial drafts of API documentation.
+
+ver 0.2:
+	Add more detailed handling for network names.
+	Add character set support for phonebook.
+	Add SIM file reading and writing utilities.
+	Add experimental support for MT incoming SMS store.
+	Add special support for ti_calypso based devices.
+
+ver 0.1:
+	Initial public release.
